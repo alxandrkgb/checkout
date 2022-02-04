@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=5"/>
+    <link rel="icon" href="images/devchallenges.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+  </head>
+  <body>
+    <h1>Checkout</h1>
+    <form action="" class="form">
+      <div>
+    <h2>Contact Information</h2>
+      <label class="e-mail" for="email">Email</label><br>
+      <input type="text" id="email" name="email" placeholder="Enter your email..." required>
+      
+      <label class="phone-label" for="phone">Phone</label><br>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone..." required>
+      </div>
+
+      <div>
+        <h3>Shipping address</h3>
+        <label class="f-name" for="fname">Full name</label><br>
+      <input type="text" id="fname" name="fname" placeholder="Your name..." required>
+
+      <label class="address-label" for="address">Address</label><br>
+      <input type="text" id="address" name="address" placeholder="Your address..." required>
+
+      <label class="city-label" for="city">City</label><br>
+      <input type="text" id="city" name="address" placeholder="Your city..." required>
+
+      <label class="country-label" for="country">Country</label><br>
+      <select id="country" name="country" required>
+        <option value="">Your country...</option>
+        <option value="Africa">Africa</option>
+        <option value="Asia">Asia</option>
+        <option value="Australia">Australia</option>
+        <option value="Europe">Europe</option>
+        <option value="North America">North America</option>
+        <option value="South America">South America</option></select>
+
+      <label class="postal-code" for="postalcode">Postal Code</label><br>
+      <input type="text" id="postcode" name="postal-code" placeholder="Your postal code..." required>
+
+      <label class="terms" for="terms">Save this information for next time</label>
+      <input type="checkbox" id="t-c" name="terms" required>
+      </div>
+      <input class="submit" type="submit" value="Continue">
+    </form>
+    <div class="cart">
+      <img class="product1-img" src="images/photo1.png" alt="">
+      <h1 class="product1-name">Vintage Backbag</h1>
+      <p class="newprice1">$54.99</p>
+      <p class="ogprice1">$94.99</p>
+      <div class="button1">
+        <span class="minus">-</span>
+        <span class="num">1</span>
+        <span class="plus">+</span>
+      </div>
+      <img class="product2-img" src="images/photo2.png" alt="">
+      <p class="product2-name">Levi Shoes</p>
+      <p class="newprice2">$74.99</p>
+      <p class="ogprice2">$124.99</p>
+      <div class="button2">
+        <span class="minus">-</span>
+        <span class="num">1</span>
+        <span class="plus">+</span>
+      </div>
+      <hr class="hr1">
+      <p class="shipping">Shipping</p>
+      <p class="shippingcost">$19</p>
+      <hr class="hr2">
+      <p class="total">Total</p>
+      <p class="totalcost">$148.98</p>
+    </div>
+
+
+
+    <footer>
+      <p>created by <a href="https://github.com/y0gyekye">Gyekye Alexander</a> - devChallenged.io</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
