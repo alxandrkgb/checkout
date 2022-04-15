@@ -1,87 +1,181 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=5"/>
-    <link rel="icon" href="images/devchallenges.png" />
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Checkout</title>
+    <link rel="icon" href="images/devchallenges.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
-  </head>
-  <body>
-    <h1>Checkout</h1>
-    <form action="" class="form">
-      <div>
-    <h2>Contact Information</h2>
-      <label class="e-mail" for="email">Email</label><br>
-      <input type="text" id="email" name="email" placeholder="Enter your email..." required>
-      
-      <label class="phone-label" for="phone">Phone</label><br>
-      <input type="tel" id="phone" name="phone" placeholder="Enter your phone..." required>
-      </div>
+</head>
 
-      <div>
-        <h3>Shipping address</h3>
-        <label class="f-name" for="fname">Full name</label><br>
-      <input type="text" id="fname" name="fname" placeholder="Your name..." required>
-
-      <label class="address-label" for="address">Address</label><br>
-      <input type="text" id="address" name="address" placeholder="Your address..." required>
-
-      <label class="city-label" for="city">City</label><br>
-      <input type="text" id="city" name="address" placeholder="Your city..." required>
-
-      <label class="country-label" for="country">Country</label><br>
-      <select id="country" name="country" required>
-        <option value="">Your country...</option>
-        <option value="Africa">Africa</option>
-        <option value="Asia">Asia</option>
-        <option value="Australia">Australia</option>
-        <option value="Europe">Europe</option>
-        <option value="North America">North America</option>
-        <option value="South America">South America</option></select>
-
-      <label class="postal-code" for="postalcode">Postal Code</label><br>
-      <input type="text" id="postcode" name="postal-code" placeholder="Your postal code..." required>
-
-      <label class="terms" for="terms">Save this information for next time</label>
-      <input type="checkbox" id="t-c" name="terms" required>
-      </div>
-      <input class="submit" type="submit" value="Continue">
-    </form>
-    <div class="cart">
-      <img class="product1-img" src="images/photo1.png" alt="">
-      <h1 class="product1-name">Vintage Backbag</h1>
-      <p class="newprice1">$54.99</p>
-      <p class="ogprice1">$94.99</p>
-      <div class="button1">
-        <span class="minus">-</span>
-        <span class="num">1</span>
-        <span class="plus">+</span>
-      </div>
-      <img class="product2-img" src="images/photo2.png" alt="">
-      <p class="product2-name">Levi Shoes</p>
-      <p class="newprice2">$74.99</p>
-      <p class="ogprice2">$124.99</p>
-      <div class="button2">
-        <span class="minus">-</span>
-        <span class="num">1</span>
-        <span class="plus">+</span>
-      </div>
-      <hr class="hr1">
-      <p class="shipping">Shipping</p>
-      <p class="shippingcost">$19</p>
-      <hr class="hr2">
-      <p class="total">Total</p>
-      <p class="totalcost">$148.98</p>
-    </div>
-
-
-
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+    <main>
+        <section class="items-groceries">
+            <div class="item">
+                <div class="item-picture">
+                    <img src="images/photo1.png" alt="">
+                </div>
+                <div class="item-detail">
+                    <h4 class="item-name">Vintage Backbag</h4>
+                    <div class="item-price">
+                        <span class="price">$<span>54.99</span></span>
+                        <small class="price-discount">$94.99</small>
+                    </div>
+                    <div class="item-amount">
+                        <div>
+                            <span class="material-icons remove-icon">remove</span>
+                        </div>
+                        <span class="amount">1</span>
+                        <div>
+                            <span class="material-icons add-icon">add</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-picture">
+                    <img src="images/photo2.png" alt="">
+                </div>
+                <div class="item-detail">
+                    <h4 class="item-name">Levi Shoes</h4>
+                    <div class="item-price">
+                        <span class="price">$<span>74.99</span></span>
+                        <small class="price-discount">$124.99</small>
+                    </div>
+                    <div class="item-amount">
+                        <div>
+                            <span class="material-icons remove-icon">remove</span>
+                        </div>
+                        <span class="amount">1</span>
+                        <div>
+                            <span class="material-icons add-icon">add</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="price-detail">
+                <hr>
+                <div class="shipping-detail">
+                    <h3 class="shipping">Shipping</h3>
+                    <span class="price-total shipping-price">$<span>19</span></span>
+                </div>
+                <hr>
+                <div class="shipping-detail">
+                    <h3 class="shipping">Total</h3>
+                    <span class="price-total cart-total-price">$<span>148.98</span></span>
+                </div>
+            </div>
+        </section>
+        <section class="checkout-form">
+            <form action="">
+                <div class="form-container">
+                    <h3 class="form-title">Contact infomation</h3>
+                    <div class="input-container">
+                        <div class="form-control">
+                            <label class="label" for="email"><small>E-mail</small></label>
+                            <div class="input-field">
+                                <i class="material-icons">email</i>
+                                <input class="input" type="text" id="email" placeholder="Enter your email...">
+                            </div>
+                            <small class="message">Error message</small>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="form-control">
+                            <label class="label" for="phone"><small>Phone</small></label>
+                            <div class="input-field">
+                                <i class="material-icons">phone</i>
+                                <input class="input" type="text" id="phone" placeholder="Enter your phone...">
+                            </div>
+                            <small class="message">Error message</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <h3 class="form-title">Shipping address</h3>
+                    <div class="input-container">
+                        <div class="form-control">
+                            <label class="label" for="name"><small>Full name</small></label>
+                            <div class="input-field">
+                                <i class="material-icons">account_circle</i>
+                                <input class="input" type="text" id="name" placeholder="Your full name..">
+                            </div>
+                            <small class="message">Error message</small>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="form-control">
+                            <label class="label" for="address"><small>Address</small></label>
+                            <div class="input-field">
+                                <i class="material-icons">home</i>
+                                <input class="input" type="text" id="address" placeholder="Your address..">
+                            </div>
+                            <small class="message">Error message</small>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="form-control">
+                            <label class="label" for="city"><small>City</small></label>
+                            <div class="input-field">
+                                <i class="material-icons">location_city</i>
+                                <input class="input" type="text" id="city" placeholder="Your city..">
+                            </div>
+                            <small class="message">Error message</small>
+                        </div>
+                    </div>
+                    <div class="input-container row">
+                        <div class="input-sub-container">
+                            <div class="form-control">
+                                <label class="label" for="country"><small>Country</small></label>
+                                <div class="input-field">
+                                    <i class="material-icons">public</i>
+                                    <select name="country" class="select-form" id="country">
+                                        <option value="" disabled selected hidden>Your country..</option>
+                                        <option value="russia">Germany</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="usa">USA</option>
+                                        <option value="china">China</option>
+                                        <option value="brazil">Brazil</option>
+                                        <option value="brazil">India</option>
+                                    </select>
+                                </div>
+                                <small class="message">Error message</small>
+                            </div>
+                        </div>
+                        <div class="input-sub-container">
+                            <div class="form-control">
+                                <label class="label" for="postal"><small>Postal code</small></label>
+                                <div class="input-field">
+                                    <i class="material-icons">markunread_mailbox</i>
+                                    <input class="input" type="number" id="postal" placeholder="Your postal code..">
+                                </div>
+                                <small class="message">Error message</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-container ask">
+                        <input class="input" type="checkbox" id="ask">
+                        <label class="label" for="ask"><small>Save this information for next time</small></label>
+                    </div>
+                    <div class="submit-container">
+                        <input type="submit" value="Continue">
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
     <footer>
-      <p>created by <a href="https://github.com/y0gyekye">Gyekye Alexander</a> - devChallenged.io</p>
+        <h5 class="copyright">created by <b><a href="https://github.com/alxandrkgb" target="_blank">alxandrkgb</a></b> - devChallenges.io</h5>
     </footer>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
